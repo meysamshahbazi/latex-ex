@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {subsection}{\numberline {1.1}Lorum}{2}
+\contentsline {subsubsection}{\numberline {1.1.1}sub sub}{2}
+\contentsline {paragraph}{short point}{2}
+\contentsline {subsection}{\numberline {1.2}Empesis}{2}
+\contentsline {subsection}{\numberline {1.3}Fonts size }{3}
+\contentsline {subsection}{\numberline {1.4}Qoution}{3}
+\contentsline {subsection}{\numberline {1.5}figs}{3}
+\contentsline {section}{\numberline {2}table}{6}
+\contentsline {section}{\numberline {3}math}{7}
+\contentsline {subsubsection}{\numberline {3.0.1}align envierments}{7}
+\contentsline {section}{\numberline {4}related work}{7}
