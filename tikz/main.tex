@@ -2,10 +2,21 @@
 \usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usetikzlibrary{quotes,arrows.meta}
+
+\usetikzlibrary{3d} %for including external image 
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{automata}
+\usepackage{Ball}
 
 
 \title{work with Tikz}
 \author{meysam}
+
+\def\SumColor{rgb:blue,5;green,15}
+
+
 
 \begin{document}
 	\maketitle	
@@ -96,6 +107,47 @@
 	\filldraw[thick,fill=yellow,draw=red]
 	(1,1) circle (0.5cm);
 \end{tikzpicture}
+
+\lipsum[1]
+
+\begin{tikzpicture}
+	\tikzstyle{connection}=[ultra thick,every node/.style={sloped,allow upside down},draw=\edgecolor,opacity=0.7]
+	\node[canvas is zy plane at x=0] (temp) at (-3,0,0)
+	 {\includegraphics[width=2cm,height=2cm]{1_1_09_2f_37.png}};
+	
+	\draw [color=black]
+	 (temp) node[anchor=south] at (-3,-2){\texttt{Input Face}};
+	%\draw[connection] 
+	\draw[->,thick] (-2.5,0) -- (-2,0);
+	
+	\node[trapezium,
+	draw = blue!80,
+	text = black,
+	fill = teal!20,
+	rotate=270,
+	trapezium stretches = true,
+	minimum width = 2cm, 
+	minimum height = 3cm] (t) at (-.5,0) {Feature Extraction};
+	
+	\draw[->,thick] (1.2,0) -- (1.7,0);
+	
+	\node[rectangle,
+	draw = magenta!80,
+	text = black,
+	fill = magenta!20,
+	rotate=270,
+	trapezium stretches = true,
+	minimum width = 2cm, 
+	minimum height = 2cm] (t) at (3,0) {Classification};
+	
+	\pic[shift={(1.5,0,0)}] at (4,0) {Ball={name=elt1,%
+			fill=\SumColor,opacity=0.6,%
+			radius=3,logo=1/0?}};
+		
+\end{tikzpicture}
+
+
+
 
 
 
